@@ -30,8 +30,10 @@ class Login extends React.Component {
             window.localStorage.setItem('token', res.data.payload);
             this.props.history.push('/friendsList');
             console.log('this is here',res.data.payload)
+            // setIsLoading(false);
         })
         .catch(err => console.log('this is an error', err));
+        // setIsLoading(false);
     }
     
     render(){
@@ -55,7 +57,7 @@ class Login extends React.Component {
           value={this.state.credentials.password}
           onChange={this.handleChange}
           />
-          <button>Login in</button>
+          <button>Login</button>
       </form>
     </div>
   );

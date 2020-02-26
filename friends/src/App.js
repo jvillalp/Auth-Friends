@@ -17,17 +17,17 @@ function App() {
   return (
     <Router>
     <div className="App">
-      <ul>
-        <li>
+      <nav>
           <Link to="/login">Login</Link>
-        </li>
-        <li>
+       
           <Link to="/friendsList">Friends List</Link>
-        </li>
-      </ul>
+        
+          {/* <Link to="/friendsForm">Friends Form</Link> */}
+       </nav>
       <Switch>
-        <PrivateRoute exact path="/friendsList" component={FriendsList}/>
-        <PrivateRoute component={FriendsForm}/>
+        <PrivateRoute exact path="/friendsList" component={FriendsList} />
+        <PrivateRoute  exact path="/friendsForm" component={FriendsForm}/>
+
       <Route path='/login' component={Login}/>
       </Switch>
     </div>
